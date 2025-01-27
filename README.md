@@ -1,4 +1,4 @@
-# MERN Project
+# Life-Story-Teller
 
 A **MERN Stack** application built using **MongoDB, Express, React, and Node.js**. This project is designed to demonstrate the implementation of Life-Story-Teller.
 
