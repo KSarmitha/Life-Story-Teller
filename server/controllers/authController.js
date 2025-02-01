@@ -3,11 +3,11 @@ const jwt = require("jsonwebtoken");
 const UserModel = require("../models/User");
 
 const generateAccessToken = (user) => {
-  return jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '15m' });
+  return jwt.sign(user, process.env.JWT_SECRET, { expiresIn: "30m" });
 };
 
 const generateRefreshToken = (user) => {
-  return jwt.sign(user, process.env.JWT_REFRESH_SECRET, { expiresIn: '7d' });
+  return jwt.sign(user, process.env.JWT_REFRESH_SECRET, { expiresIn: "7d" });
 };
 
 exports.signup = async (req, res) => {
@@ -35,12 +35,19 @@ exports.login = async (req, res) => {
     if (user) {
       const isPasswordValid = await bcrypt.compare(password, user.password);
       if (isPasswordValid) {
-        const userPayload = { id: user._id, email: user.email, name: user.name };
+        const userPayload = {
+          id: user._id,
+          email: user.email,
+          name: user.name,
+        };
         const accessToken = generateAccessToken(userPayload);
         const refreshToken = generateRefreshToken(userPayload);
 
-        res.cookie('refreshToken', refreshToken, { httpOnly: true, secure: true });
-        
+        res.cookie("refreshToken", refreshToken, {
+          httpOnly: true,
+          secure: true,
+        });
+
         req.session.user = userPayload;
         res.status(200).json({ message: "Login successful", accessToken });
       } else {

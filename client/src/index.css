@@ -1,10 +1,90 @@
+:root {
+  --font: Inter, sans-serif;
+  --primary: #0d7377;
+  --secondary: #32e0c4;
+  --background: #222831;
+  --neon-green: #4caf50;
+  --mint-green: #94d2bd;
+  --white: #ffffff;
+  --amber: #ee9b00;
+  --secondary-bg: #f9f9f9;
+  --dark-gray: #16161a;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-    background-color: rebeccapurple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+  font-family: var(--font);
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+  background-color: var(--secondary-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heading {
+  color: var(--primary);
+  font-size: xx-large;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.sub-heading {
+  color: var(--primary);
+  font-size: x-large;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.desc {
+  color: var(--primary);
+  font-size: medium;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.center {
+  text-align: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pt-5 {
+  padding-top: 0.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.chatbot-container {
+  animation: slideUp 1s ease-out forwards; /* Apply sliding animation */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    bottom: -120px; /* Initial position off-screen */
+  }
+  100% {
+    opacity: 1;
+    bottom: 0; /* End position at the bottom */
+  }
 }

@@ -43,3 +43,5 @@ app.listen(process.env.PORT, () => {
 
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/user", require("./routes/userRoutes"));
+app.use("/story", require("./routes/storyRoutes"));
+app.use("/chat", require("./routes/chatRoutes"));
