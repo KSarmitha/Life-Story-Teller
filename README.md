@@ -6,12 +6,12 @@ A **MERN Stack** application built using **MongoDB, Express, React, and Node.js*
 
 ## Features
 
-- **Authentication**: User login and registration with secure JWT-based authentication.
-- **CRUD Operations**: Full Create, Read, Update, and Delete operations for core application data.
-- **API Integration**: Backend API with Express for data handling.
-- **Responsive UI**: React-based frontend with responsive design.
-- **State Management**: Context API for global state management.
-- **Database**: MongoDB for data storage.
+- **User login and registration with secure JWT-based authentication**
+- **Profile Management**
+- **Story submission via text and media**
+- **AI-generated narratives using Gemini AI**
+- **Chatbot assistance**
+- **Story editing, deletion, download and sharing options**
 
 ---
 
