@@ -56,7 +56,7 @@ Ensure you have the following installed on your system:
      npm install
      ```
 
-3. Create a `.env` file in the `server` folder with the following:
+3. Update `.env` file in the `server` folder with the following:
 
    ```env
    PORT=3001
@@ -71,7 +71,7 @@ Ensure you have the following installed on your system:
    - **Backend**:
      ```bash
      cd .\server\
-     npm run start
+     npm start
      ```
 
    - **Frontend**:
