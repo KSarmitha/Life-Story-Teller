@@ -59,9 +59,9 @@ Ensure you have the following installed on your system:
 3. Create a `.env` file in the `server` folder with the following:
 
    ```env
-   PORT=5000
+   PORT=3001
    MONGO_URI=your_mongodb_connection_string
-   FRONTEND_URL="http://localhost:3000"
+   FRONTEND_URL="http://localhost:5173"
    JWT_SECRET=your_jwt_secret
    JWT_REFRESH_SECRET=your_jwt_refresh_secret
    ```
@@ -70,17 +70,17 @@ Ensure you have the following installed on your system:
 
    - **Backend**:
      ```bash
-     cd server
-     npm run dev
+     cd .\server\
+     npm run start
      ```
 
    - **Frontend**:
      ```bash
-     cd ../client
+     cd .\client\
      npm start
      ```
 
-5. Access the app at `http://localhost:3000` (frontend) and `http://localhost:5000` (backend).
+5. Access the app at `http://localhost:5173` (frontend) and `http://localhost:3001` (backend).
 
 ---
 
