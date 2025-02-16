@@ -56,14 +56,16 @@ Ensure you have the following installed on your system:
      npm install
      ```
 
-3. Update `.env` file in the `server` folder with the following:
+3. Create a `.env` file in the `server` folder with the following:
 
    ```env
    PORT=3001
    MONGO_URI=your_mongodb_connection_string
    FRONTEND_URL="http://localhost:5173"
+   SESSION_SECRET=your_session_secret
    JWT_SECRET=your_jwt_secret
    JWT_REFRESH_SECRET=your_jwt_refresh_secret
+   GEMINI_API_KEY=your_gemini_api_key
    ```
 
 4. Start the development servers:
