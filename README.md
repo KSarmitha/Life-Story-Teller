@@ -46,13 +46,13 @@ Ensure you have the following installed on your system:
 
    - **Backend**:
      ```bash
-     cd server
+     cd .\server\
      npm install
      ```
 
    - **Frontend**:
      ```bash
-     cd ../client
+     cd .\client\
      npm install
      ```
 
